@@ -11,7 +11,7 @@
   <!-- Favicon -->
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
 
-  <!-- (Опционально) Базовые Open Graph для красивых превью в соцсетях -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Название вашего сайта" />
   <meta property="og:description" content="Краткое описание главной страницы вашего сайта" />
   <meta property="og:type" content="website" />
@@ -21,7 +21,9 @@
 <body>
   <!-- Шапка сайта -->
   <header>
-    <a href="/">Логотип или название сайта</a>
+    <a href="index.html" aria-label="На главную">
+      <img src="srs/logo.png" alt="Логотип сайта" width="120" height="36" />
+    </a>
     <!-- Главное меню навигации -->
     <nav>
       <ul>
@@ -35,6 +37,15 @@
   <!-- Уникальное основное содержимое страницы -->
   <main>
     <h1>Добро пожаловать на наш сайт!</h1>
+
+    <!-- Герой-иллюстрация с WebP + fallback -->
+    <figure>
+      <picture>
+        <source srcset="srs/hero.webp" type="image/webp" />
+        <img src="srs/hero.jpg" alt="Наши проекты и команда" loading="lazy" width="1200" />
+      </picture>
+      <figcaption>Наши ключевые направления и проекты</figcaption>
+    </figure>
 
     <!-- Секция 1 с якорем -->
     <section id="services">
